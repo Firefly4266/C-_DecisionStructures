@@ -17,23 +17,24 @@ namespace DecisionStructures
             Console.Write("How many products did you purchase at this price? ");
             var itemAmount = Console.ReadLine();
             var amount = decimal.Parse(itemAmount);
-            var purchacePrice = amount * price;
+            var purchasePrice = amount * price;
             if (amount > 5 && price > 100)
             {
-                if (purchacePrice > 10000)
+                if (purchasePrice > 10000)
                 {
-                    discount = purchacePrice * 0.2m;
-                    Console.WriteLine("Your discount is: ${0} on a ${1} purchase", discount, purchacePrice);
+                    discount = purchasePrice * 0.2m;
+                    //Console.WriteLine("Your discount is: ${0} on a ${1} purchase", discount, purchasePrice);
+                    Console.WriteLine($"Your discount is: {discount:c} on a {purchasePrice:C} purchase.");
                 }
-                else if (purchacePrice < 10000 && purchacePrice > 1000)
+                else if (purchasePrice < 10000 && purchasePrice > 1000)
                 {
-                    discount = purchacePrice * 0.1m;
-                    Console.WriteLine("Your discount is: ${0} on a ${1} purchase", discount, purchacePrice);
+                    discount = purchasePrice * 0.1m;
+                    Console.WriteLine("Your discount is: ${0} on a ${1} purchase", discount, purchasePrice);
                 }
-                else if (purchacePrice < 1000 && purchacePrice > 100)
+                else if (purchasePrice < 1000 && purchasePrice > 100)
                 {
-                    discount = purchacePrice * 0.05m;
-                    Console.WriteLine("Your discount is: ${0} on a ${1} purchase", discount, purchacePrice);
+                    discount = purchasePrice * 0.05m;
+                    Console.WriteLine("Your discount is: ${0} on a ${1} purchase", discount, purchasePrice);
                 }
                 else
                     Console.WriteLine("You do not get a discount.");
