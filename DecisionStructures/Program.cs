@@ -39,6 +39,9 @@ namespace DecisionStructures
                 else
                     Console.WriteLine("You do not get a discount.");
             }
+            //need this final else statement or the program will fall through and crash when the first if conditions aren't met.
+            else
+                Console.WriteLine("You do not get a discount.");
         }
     }
 }
